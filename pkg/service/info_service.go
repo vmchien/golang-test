@@ -46,7 +46,7 @@ func (sv *MyServer) GetDb(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, dataInfo)
 }
 
-func AsyncRawDataInfo(sv *MyServer, wgrp *sync.WaitGroup, result chan []model.Info) {
+func AsyncRawDataInfo(sv *MyServer, wgrp *sync.WaitGroup, result chan<- []model.Info) {
 	defer func() {
 		close(result)
 		wgrp.Done()
@@ -79,7 +79,7 @@ func (sv *MyServer) GetAllDb(ctx *gin.Context) {
 	})
 }
 
-func AsyncRawDataPurchase(sv *MyServer, wgrp *sync.WaitGroup, result chan []model.Purchase) {
+func AsyncRawDataPurchase(sv *MyServer, wgrp *sync.WaitGroup, result chan<- []model.Purchase) {
 	defer func() {
 		close(result)
 		wgrp.Done()
