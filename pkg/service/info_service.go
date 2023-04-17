@@ -35,6 +35,7 @@ func (sv *MyServer) GetDb(ctx *gin.Context) {
 			}
 		}
 	} else {
+		log.Printf("Get Cache")
 		err := json.Unmarshal([]byte(data), &dataInfo)
 		if err != nil {
 			ctx.JSON(http.StatusOK, "")

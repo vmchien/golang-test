@@ -13,6 +13,7 @@ type Config struct {
 	RedisDB   string `mapstructure:"REDIS_DB"`
 	RedisHost string `mapstructure:"REDIS_HOST"`
 	RedisPort string `mapstructure:"REDIS_PORT"`
+	RedisPass string `mapstructure:"REDIS_PASS"`
 	RedisType string `mapstructure:"REDIS_TYPE"`
 	RedisTTL  string `mapstructure:"REDIS_TTL"`
 }

@@ -11,7 +11,7 @@ func GetInstance(config config.Config) *redis.Client {
 	redisDB, _ := strconv.Atoi(config.RedisDB)
 	client := redis.NewClient(&redis.Options{
 		Addr:     fmt.Sprintf("%v:%v", config.RedisHost, config.RedisPort),
-		Password: "",
+		Password: config.RedisPass,
 		DB:       redisDB,
 	})
 	client.Type(config.RedisType)
