@@ -12,38 +12,15 @@ import (
 func main() {
 	// URL của chương truyện
 	urls := []string{
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1570-15.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1571-14.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1572-15.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1573-15.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1574-16.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1575-15.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1576-16.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1577-15.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1578-17.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1579-16.html",
-
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1580-16.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1581-16.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1582-17.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1583-16.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1584-17.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1585-16.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1586-16.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1587-18.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1588-17.html",
-		"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1589-16.html",
-
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1560-15.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1561-16.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1562-15.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1563-16.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1564-17.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1565-16.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1566-15.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1567-16.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1568-16.html",
-		//"https://metruyenfull.org/chien-than-bat-bai-tieu-chinh-van/chuong-1569-16.html",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3521-3934303534352D36332D333532312D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3522-3934303534352D36332D333532322D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3523-3934303534352D36332D333532332D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3524-3934303534352D36332D333532342D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3525-3934303534352D36332D333532352D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3526-3934303534352D36332D333532362D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3527-3934303534352D36332D333532372D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3528-3934303534352D36332D333532382D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3529-3934303534352D36332D333532392D3135373338322D30",
 	}
 
 	for _, v := range urls {
@@ -82,8 +59,8 @@ func read(url string) {
 	}
 
 	// Tìm thẻ chứa nội dung truyện (thay đổi theo cấu trúc trang web)
-	doc.Find(".chapter-c").Each(func(i int, s *goquery.Selection) {
-		content := s.Text()
+	doc.Find("#borderchapter p.padtext").Each(func(i int, s *goquery.Selection) {
+		content := strings.TrimSpace(s.Text())
 		lines := strings.Split(content, "\n")
 		for _, line := range lines {
 			if strings.Contains(line, "Click Theo Dõi ->") {
