@@ -5,6 +5,7 @@ import (
 	"io"
 	"net/http"
 	"strings"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -12,18 +13,20 @@ import (
 func main() {
 	// URL của chương truyện
 	urls := []string{
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3521-3934303534352D36332D333532312D3135373338322D30",
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3522-3934303534352D36332D333532322D3135373338322D30",
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3523-3934303534352D36332D333532332D3135373338322D30",
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3524-3934303534352D36332D333532342D3135373338322D30",
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3525-3934303534352D36332D333532352D3135373338322D30",
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3526-3934303534352D36332D333532362D3135373338322D30",
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3527-3934303534352D36332D333532372D3135373338322D30",
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3528-3934303534352D36332D333532382D3135373338322D30",
-		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-3529-3934303534352D36332D333532392D3135373338322D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4460-3934303534352D36332D343436302D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4461-3934303534352D36332D343436312D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4462-3934303534352D36332D343436322D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4463-3934303534352D36332D343436332D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4464-3934303534352D36332D343436342D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4465-3934303534352D36332D343436352D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4466-3934303534352D36332D343436362D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4467-3934303534352D36332D343436372D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4468-3934303534352D36332D343436382D3133333033362D30",
+		"https://hotruyen1.com/chuong/chien-than-o-re-duong-thanh-tan-thanh-tam-bat-bai-chien-than-duong-than-chuong-4469-3934303534352D36332D343436392D3133333033362D30",
 	}
 
 	for _, v := range urls {
+		time.Sleep(time.Millisecond * 600)
 		read(v)
 	}
 
